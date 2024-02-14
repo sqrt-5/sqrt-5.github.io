@@ -25,7 +25,7 @@ body {
 }
 
 .header h1 {
-    font-size: 50px;
+    font-size: 30px;
     margin: 5px;
 }
    
@@ -84,7 +84,6 @@ body {
     padding: 20px;
     margin-top: 20px;
     border-radius: 10px;
-    transition: background 0.3s ease;
 }
 
 .card a{
@@ -92,10 +91,6 @@ body {
     text-decoration: none;
 }
 
-.card:hover{
-    background-color: #f8f2ea;
-}
-   
 /* 列后面清除浮动 */
 .row:after {
     content: "";

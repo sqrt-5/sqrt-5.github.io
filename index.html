@@ -5,26 +5,36 @@
         <title>sqrt5</title>
         <link rel="shortcut icon" href="xuziyue2009.github.io/favicon.ico"></link>
         <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/decimal.js/10.2.1/decimal.min.js"></script>
     </head>
     <body>
-        <div class="header">
-            <h1 id="sqrt">sqrt5=</h1>
-        </div>
+        <div class="header">  
+            <h1 id="sqrt">sqrt5=</h1>  
+        </div>  
+        <div class="footer">  
+            -wckxc2236-  
+        </div>   
         <script>  
-            var i = 0;
-            while (1){
-                sqrt5 = Math.sqrt(5).toFixed(i);  
-              
-                sqrt5ResultElement = document.getElementById('sqrt');  
-                sqrt5ResultElement.textContent = `sqrt5=${sqrt5}`; 
+            // 使用decimal.js初始化sqrt(5)的值  
+            var sqrt5 = new Decimal(5).sqrt();  
+            // 初始小数位数  
+            var decimalPlaces = 0;  
+            // 获取显示结果的元素  
+            var sqrt5ResultElement = document.getElementById('sqrt');  
                 
-                setTimeout(100);
-
-                i++;
-            }
+            // 设置定时器，每0.1秒更新一次  
+            var intervalId = setInterval(function() {    
+                // 计算根号5的值，并保留指定的小数位数  
+                var sqrt5Value = sqrt5.toDecimalPlaces(decimalPlaces);  
+                // 更新显示结果  
+                sqrt5ResultElement.textContent = `sqrt5=${sqrt5Value.toString()}`;  
+                // 增加小数位数  
+                decimalPlaces++;    
+                // 如果小数位数达到某个上限，清除定时器停止更新  
+                if (decimalPlaces > 2236) { // 例如，我们设定上限为2236位小数  
+                    clearInterval(intervalId);  
+                }    
+            }, 100); // 每0.1秒更新一次（100毫秒）
         </script>  
-        <div class="footer">
-            -wckxc2236-
-        </div> 
     </body>
 </html>

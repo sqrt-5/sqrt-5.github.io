@@ -1,2 +1,2 @@
-# LLGJX.github.io
-高佳熙元帅万岁
+# wckxc2236.github.io
+2.236

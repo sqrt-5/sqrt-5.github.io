@@ -15,26 +15,29 @@
             -wckxc2236-  
         </div>   
         <script>  
-            // 使用decimal.js初始化sqrt(5)的值  
-            var sqrt5 = new Decimal(5).sqrt();  
-            // 初始小数位数  
-            var decimalPlaces = 0;  
-            // 获取显示结果的元素  
-            var sqrt5ResultElement = document.getElementById('sqrt');  
+            // // 使用decimal.js初始化sqrt(5)的值  
+            // var sqrt5 = new Decimal(5).sqrt();  
+            // // 初始小数位数  
+            // var decimalPlaces = 0;  
+            // // 获取显示结果的元素  
+            // var sqrt5ResultElement = document.getElementById('sqrt');  
                 
-            // 设置定时器，每0.1秒更新一次  
-            var intervalId = setInterval(function() {    
-                // 计算根号5的值，并保留指定的小数位数  
-                var sqrt5Value = sqrt5.toDecimalPlaces(decimalPlaces);  
-                // 更新显示结果  
-                sqrt5ResultElement.textContent = `sqrt5=${sqrt5Value.toString()}`;  
-                // 增加小数位数  
-                decimalPlaces++;    
-                // 如果小数位数达到某个上限，清除定时器停止更新  
-                if (decimalPlaces > 2236) { // 例如，我们设定上限为2236位小数  
-                    clearInterval(intervalId);  
-                }    
-            }, 100); // 每0.1秒更新一次（100毫秒）
+            // // 设置定时器，每0.1秒更新一次  
+            // var intervalId = setInterval(function() {    
+            //     // 计算根号5的值，并保留指定的小数位数  
+            //     var sqrt5Value = sqrt5.toDecimalPlaces(decimalPlaces);  
+            //     // 更新显示结果  
+            //     sqrt5ResultElement.textContent = `sqrt5=${sqrt5Value.toString()}`;  
+            //     // 增加小数位数  
+            //     decimalPlaces++;    
+            //     // 如果小数位数达到某个上限，清除定时器停止更新  
+            //     if (decimalPlaces > 2236) { // 例如，我们设定上限为2236位小数  
+            //         clearInterval(intervalId);  
+            //     }    
+            // }, 100); // 每0.1秒更新一次（100毫秒）
+
+            const precision = 100;
+            let 
         </script>  
     </body>
 </html>

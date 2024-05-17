@@ -27,6 +27,7 @@ body {
 .header h1 {
     font-size: 50px;
     margin: 5px;
+    word-wrap: break-word;
 }
    
 /* 导航条 */
